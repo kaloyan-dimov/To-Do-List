@@ -4,6 +4,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
     header('Content-Type: text/html');
+    
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +18,7 @@
 <body>
     <header><h1>To Do List on Localhost</h1></header>
     <div class="container">
-    <div class="connection">
+        <div class="connection">
             <div class="connect_db">
                 <button class="dropdown_btn">Connect to Database</button>
                 <div class="credentials">
@@ -44,6 +45,23 @@
             <div class="connection_status"></div>
             <h2 class="connection_message"></h2>
             </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="add_task_container">
+            <button class="toggle_add_task">Add Task</button>
+            <div class="task_input">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Title">
+                <label for="title">Description</label>
+                <input type="textarea" id="description" name="description" placeholder="description">
+                <button id="add_task">Add</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="list_tasks">
+            
         </div>
     </div>
     <script defer src="./src/main.js" type="module"></script>

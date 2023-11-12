@@ -1,4 +1,6 @@
 @import 'css/connect_db.css';
+@import 'css/add_task.css';
+@import 'css/list_tasks.css';
 
 html,
 body {

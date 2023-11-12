@@ -1,13 +1,15 @@
 
 <?php
+$credentials = file_get_contents("credentials.json");
+$credentials_arr = json_decode($credentials, true);
 
-$servername = $_POST['servername'];
-$username = $_POST['username'];
-$password = $_POST['password'];
-$database = $_POST['database'];
+
+$servername = $credentials_arr['servername'];
+$username = $credentials_arr['username'];
+$password = $credentials_arr['password'];
+$database = $credentials_arr['database'];
 
 $response;
-global $conn;
 
 connect_mysql($servername, $username, $password, $database);
 
@@ -31,10 +33,11 @@ function connect_mysql($servername, $username, $password, $database) {
     }
     $response = array('status' => 'Success', 'message' => 'Connected');
 
-    include('connect_db.php');
+    include_once('connect_db.php');
     check_db_exists($database, $conn, $response);
     
-    return;
+
+    return $conn;
 }
 
 ?> 
