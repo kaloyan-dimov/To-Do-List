@@ -29,7 +29,7 @@ export default () => {
         form.append('password', password);
         form.append('database', database);
 
-        http.open('POST', 'src/php/connect_db.php');
+        http.open('POST', 'src/php/connect_mysql.php');
         http.onreadystatechange = function() {
             if (http.readyState == 4) {
                 var rtxt = http.responseText;
