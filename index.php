@@ -15,8 +15,37 @@
     <title>To Do List</title>
 </head>
 <body>
-    
-
+    <header><h1>To Do List on Localhost</h1></header>
+    <div class="container">
+    <div class="connection">
+            <div class="connect_db">
+                <button class="dropdown_btn">Connect to Database</button>
+                <div class="credentials">
+                    <div><h3>Credentials for MySQL database</h3></div>
+                    <div>
+                        <label for="host">Host:</label>
+                        <input type="text" id="host" name="host" placeholder="Enter host">
+                    </div>
+                    <div>
+                        <label for="user">User:</label>
+                        <input type="text" id="user" name="user" placeholder="Enter user">
+                    </div>
+                    <div>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Enter password">
+                    </div>
+                    <div>
+                        <label for="database">Database Name:</label>
+                        <input type="text" id="database" name="database" placeholder="Enter database name">
+                    </div>
+                    <button class="connect_btn">Connect</button>
+                </div>
+            </div>
+            <div class="connection_status"></div>
+            <h2 class="connection_message"></h2>
+            </div>
+        </div>
+    </div>
     <script defer src="./src/main.js" type="module"></script>
 </body>
 </html>
