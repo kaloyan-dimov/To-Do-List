@@ -24,7 +24,7 @@
                     <div><h3>Credentials for MySQL database</h3></div>
                     <div>
                         <label for="host">Host:</label>
-                        <input type="text" id="host" name="host" placeholder="Enter host">
+                        <input type="text" id="host" name="host" placeholder="Enter host" >
                     </div>
                     <div>
                         <label for="user">User:</label>

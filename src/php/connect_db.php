@@ -1,10 +1,10 @@
 
 <?php
 
-$servername = $_REQUEST['servername'];
-$username = $_REQUEST['username'];
-$password = $_REQUEST['password'];
-$database = $_REQUEST['database'];
+$servername = $_POST['servername'];
+$username = $_POST['username'];
+$password = $_POST['password'];
+$database = $_POST['database'];
 
 $response;
 
@@ -25,9 +25,10 @@ function connect_db($servername, $username, $password, $database) {
     } catch (Exception $e) {
         $response = array('status' => 'Error', 'message' => $e->getMessage());
         echo json_encode($response);
+        $conn->close();
         return;
     }
-    $response = array('status' => 'success', 'message' => 'Connected');
+    $response = array('status' => 'Success', 'message' => 'Connected');
     echo json_encode($response);
     return;
 }
