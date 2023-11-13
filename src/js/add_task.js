@@ -1,6 +1,11 @@
 import getHTTPObject from "./getHTTPObject.js";
 
 export default () => {
+
+    document.querySelector(".toggle_add_task").addEventListener("click", () => {
+        document.querySelector(".task_input").classList.toggle("active")
+    })
+
     let task_title;
     let task_description;
     document.getElementById("add_task").addEventListener("click", () => {

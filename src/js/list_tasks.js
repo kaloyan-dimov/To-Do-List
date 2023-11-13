@@ -8,6 +8,8 @@ export default (tasks) => {
             <h3 class="description">${task.description}</h3>
             <h4 class="timestamp">Created: ${task.created_at}</h4>
             <h4 class="timestamp">Last Updated: ${task.updated_at}</h4>
+            <div class="icon delete"></div>
+            <div class="icon edit"></div>
         </div>
         `
         console.log(task)

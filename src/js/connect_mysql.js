@@ -10,10 +10,10 @@ export default () => {
     })
 
     document.querySelector(".connect_btn").addEventListener("click", () => {
-        servername = document.getElementById("host").value
-        username = document.getElementById("user").value
-        password = document.getElementById("password").value
-        database = document.getElementById("database").value
+        let servername = document.getElementById("host").value
+        let username = document.getElementById("user").value
+        let password = document.getElementById("password").value
+        let database = document.getElementById("database").value
 
         mysql_credentials_change(servername, username, password, database)
 

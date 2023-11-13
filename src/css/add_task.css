@@ -11,8 +11,22 @@
         position: absolute;
         top: 25px;
         left: 50%;
-        transform: translateX(-50%);
         display: flex;
         flex-direction: column;
+        background-color: white;
+        z-index: 1;
+        border-radius: 16px;
+        gap: 8px;
+        transform-origin: top;
+        max-height: 0px;
+        transform: scaleY(0) translateX(-50%);
+        transition: all 0.5s;
+
+        &.active {
+            max-height: 1000px;
+            transform-origin: top;
+            transform: scaleY(1) translateX(-50%);
+            transition: all 0.5s;
+        }
     }
 }

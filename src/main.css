@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     margin: 0;
     padding: 0;
 }
@@ -38,4 +38,11 @@ header {
     max-width: 1440px;
     margin: auto;
     width: 100%;
+    padding: 0 64px;
+}
+
+@media(max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
 }
