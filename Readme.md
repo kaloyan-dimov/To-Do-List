@@ -1,8 +1,8 @@
 Welcome to my Tasklist App
 
 1) Requirements:
-    - Php installation 
-    - MySql installation
+    - Php installation (current project on version 8.2.12)
+    - MySql installation (current project on version 8.0.35)
     - Server Environment (optional)
 
 2) Running
@@ -11,4 +11,4 @@ Welcome to my Tasklist App
 
 To preview either open a browse and navigate to the localhost port you ran it on, or as per your server configuration.
 
-Configuration of the MySQL database not necessary outside of navigating in the app and connecting with your MySQL credentials.
+Configuration of the MySQL database not necessary outside of navigating in the app, typing in your preferred database name (if non-existent a new one will be created), and connecting with your MySQL credentials.

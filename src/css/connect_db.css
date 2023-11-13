@@ -6,6 +6,7 @@
     padding: 16px;
 
     .connect_db {
+        z-index: 1;
         display: block;
         position: relative;
         max-height: 1500px;
