@@ -1,4 +1,5 @@
 import getHTTPObject from "./getHTTPObject.js";
+import list_tasks from "./list_tasks.js";
 
 export default () => {
 
@@ -24,8 +25,11 @@ export default () => {
         http.onreadystatechange = function() {
             if (http.readyState == 4) {
                 var rtxt = http.responseText;
-                console.log(rtxt, typeof rtxt);
+
+                // console.log(rtxt)
                 // let json_response = JSON.parse(rtxt)
+                // list_tasks(json_response["2"].tasks)
+                location.reload();
             }
         }
         http.send(form);

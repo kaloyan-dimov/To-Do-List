@@ -9,7 +9,7 @@ $username = $credentials_arr['username'];
 $password = $credentials_arr['password'];
 $database = $credentials_arr['database'];
 
-$response;
+$response = array();
 
 connect_mysql($servername, $username, $password, $database);
 
@@ -26,7 +26,7 @@ function connect_mysql($servername, $username, $password, $database) {
             return;
         } 
     } catch (Exception $e) {
-        $response = array('status' => 'Error', 'message' => $e->getMessage());
+        array_push($response, array('status' => 'Error', 'message' => $e->getMessage()));
         echo json_encode($response);
         // $conn->close();
         return;

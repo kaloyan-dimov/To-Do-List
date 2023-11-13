@@ -1,6 +1,7 @@
 .add_task_container {
     position: relative;
     display: flex;
+    margin-bottom:32px;
     
     .toggle_add_task {
         margin: auto;

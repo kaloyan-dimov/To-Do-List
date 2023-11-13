@@ -18,17 +18,17 @@
 
     $title = $_POST["title"];
     $description = $_POST["description"];
-    $response;
+    
 
     $insertTaskQuery = "INSERT INTO Tasks (title, description) VALUES ('$title', '$description')";
 
     if ($conn->query($insertTaskQuery) === TRUE) {
-        $response = array("message" => "Task added successfully.");
-        echo json_encode($response);
+        array_push($response, array($response = array("add_message" => "Task added successfully.")));
+        // echo json_encode($response);
         return;
     } else {
-        $response = array("message" => $conn->error);
-        echo json_encode($response);
+        array_push($response, array("add_message" => $conn->error));
+        // echo json_encode($response);
         return;
     }
 ?>
